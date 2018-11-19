@@ -26,7 +26,7 @@ const giftRequestSchema = new Schema({
 
 },
  {
-  timestamps: required,
+  timestamps: true,
 });
 
 const giftRequest = mongoose.model("Gift Request", giftRequestSchema);
