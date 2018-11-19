@@ -1,18 +1,17 @@
 const mongoose = require("mongoose");
 const Schema   = mongoose.Schema;
 
-//TODO: add validations and requirements to schema
 //update "helper elf" suggestions with elf object data names
 const giftRequestSchema = new Schema({
-  requesterName: String,
-  requesterEmail: String, 
-  requesterBudget: String,
-  recepientRelationship: String,
-  recipientGender: String,
-  recipientRelationship: String,
-  recipientAge: Number,
-  recipientAdditionalInfo: String,
-  giftSuggestions: String
+  requesterName: { type: String, required: true },
+  requesterEmail: { type: String, required: true },
+  requesterBudget: { type: String, required: true },
+  recepientRelationship: { type: String, required: true },
+  recipientGender: { type: String, required: true },
+  recipientRelationship: { type: String, required: true },
+  recipientAge: { type: Number, required: true },
+  recipientAdditionalInfo: { type: String},
+  giftSuggestions: { type: String,  },
   
   
   // [
