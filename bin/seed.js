@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
 const giftRequest = require('../models/gift-request-model');
 
-const dbName = 'christmas-generator';
-mongoose.connect(`mongodb://localhost/${christmas-generator}`);
 
-const giftRequest = [
+mongoose
+  .connect('mongodb://localhost/christmas-generator', {useNewUrlParser: true})
+  .then(x => {
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+  })
+  .catch(err => {
+    console.error('Error connecting to mongo', err)
+  });
+
+const requestData = [
   {
     requesterName: "Chris Kringle",
     requesterEmail: "reindeerracer@gmail.com",
@@ -31,11 +38,21 @@ const giftRequest = [
     recipientRelationship: "String",
     recipientAge: 8,
     recipientAdditionalInfo: "Likes playing outside, but dislikes licking frozen poles",
-  }
-]
+  },
+];
 
-giftRequest.create(giftRequests, (err) => {
-  if (err) { throw(err) }
-  console.log(`Created ${giftRequests.length}`)
-  mongoose.connection.close()
-});
+// giftRequest.create(giftRequests, (err) => {
+//   if (err) { throw(err) }
+//   console.log(`Created ${giftRequests.length}`)
+//   mongoose.connection.close()
+// });
+
+ 
+      
+ giftRequest.create(requestData)
+        .then(requestDoc => {
+          console.log(`Created REQUEST! ${requestDoc.length}`);
+        })
+        .catch(err => {
+          console.log("REQUEST Create FAIL!! 🤬", err);
+        });
