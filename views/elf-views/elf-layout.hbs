@@ -13,12 +13,16 @@
   </header>
 
   <nav>
-    <a href="/">Home</a>
     {{#if currentUser}}
-      <b>{{currentUser.email}}</b>
-      <<!-- <a href="/my-rooms">My Rooms</a>      
-      <a href="/settings">User Setting</a> -->>
+      <b>{{currentUser.email}}</b>     
+      <a href="/settings">User Setting</a>
       <a href="/logout">Log Out</a>
+
+      <!--"isAdmin" is a virtual (fake) property defined in USER MODEL-->
+      {{#if currentUser.isAdmin}}
+      <h3>Admin Zone</h3>
+      <a href="/admin/users">User Management</a>
+      {{/if}}
 
     {{else}}
     <a href="/signup">Sign up</a>
