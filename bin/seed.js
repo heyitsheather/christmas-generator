@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const giftRequest = require('../models/gift-request');
+const giftRequest = require('../models/gift-request-model');
 
 const dbName = 'christmas-generator';
 mongoose.connect(`mongodb://localhost/${christmas-generator}`);
@@ -33,3 +33,9 @@ const giftRequest = [
     recipientAdditionalInfo: "Likes playing outside, but dislikes licking frozen poles",
   }
 ]
+
+giftRequest.create(giftRequests, (err) => {
+  if (err) { throw(err) }
+  console.log(`Created ${giftRequests.length}`)
+  mongoose.connection.close()
+});
