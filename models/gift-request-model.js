@@ -6,9 +6,8 @@ const giftRequestSchema = new Schema({
   requesterName: { type: String, required: true },
   requesterEmail: { type: String, required: true },
   requesterBudget: { type: String, required: true },
-  recepientRelationship: { type: String, required: true },
-  recipientGender: { type: String, required: true },
   recipientRelationship: { type: String, required: true },
+  recipientGender: { type: String, required: true },
   recipientAge: { type: Number, required: true },
   recipientAdditionalInfo: { type: String},
   giftSuggestions: { type: String,  },
@@ -26,7 +25,7 @@ const giftRequestSchema = new Schema({
 
 },
  {
-  timestamps: required,
+  timestamps: true,
 });
 
 const giftRequest = mongoose.model("Gift Request", giftRequestSchema);
