@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const giftRequest = require ("../models/gift-request-model")
+const giftRequest = require ("../models/gift-request-model.js")
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -9,6 +9,10 @@ router.get('/', (req, res, next) => {
 
 router.get('/become-an-elf-login', (req, res, next) => {
   res.render('elf-views/elf-login.hbs');
+});
+
+router.get('/thanks-requester', (req, res, next)=>{
+  res.render('thanks-requester.hbs');
 });
 
 router.post("/process-request", (req, res, next) => {
@@ -30,7 +34,7 @@ router.post("/process-request", (req, res, next) => {
     recipientAge,
     recipientAdditionalInfo })
     .then(requestDoc => {
-      res.redirect("/thanks-requester.hbs");
+      res.redirect("/thanks-requester");
     })
     .catch(err => next(err));
 });
