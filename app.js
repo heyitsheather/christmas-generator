@@ -65,6 +65,9 @@ app.locals.title = 'Christmas Gift Ideas Generator';
 // default value for secondTitle for Elf page
 app.locals.secondTitle = 'Help people to finds 3 special Gifts 🎁 and gain 50 cent!';
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(flash());
 // this function runs before All ypur routes
 app.use((req, res, next) => {
@@ -72,7 +75,7 @@ app.use((req, res, next) => {
   //send flash message to the hbs files as "message"
   res.locals.messages = req.flash();
   // send logged in user's info to ALL hbs file as "currentUser"
-  // res.locals.currentUser = req.user;
+  res.locals.currentElf = req.elf;
 
   next();
 });
