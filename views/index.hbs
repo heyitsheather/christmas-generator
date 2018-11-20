@@ -1,38 +1,77 @@
 
-<h1>Welcome to the {{title}}</h1>
+<h1>IS YOUR TINSEL IN A TANGLE?</H1>
 
-<h2>Fill the form, pay 1 $ and we will send to you 3 awesome gift idea!</h2>
+<h2>WE ARE HERE TO HELP! FILL OUT THE FORM TO THE RIGHT, AND WE WILL HELP YOU FIND THE PERFECT GIFT.</h2>
 
 
-
-<form action="/process-request" method="POST">
-<label>
-  Your Name:
-  <input type="text" name="requesterName" placeholder="Ralph Parker">
-</label>
-<label>
-  Your E-mail:
-  <input type="text" name="requesterEmail" placeholder="turkeylover47@gmail.com">
-</label>
-<label>
-  How do you know the recipient?
-  <input type="text" name="recipientRelationship" placeholder="He is my son.">
-</label>
-<label>
-  Recipient's Gender:
-  <input type="text" name="recipientGender" placeholder="male">
-  <label>
-  Recipient's Age:
-  <input type="number" name="recipientAge" placeholder="8">
-  <label>
-  Your Budget:
-  <input type="number" name="requesterBudget" placeholder="$45.00">
-  <label>
-  Anything else you'd like us to know?
-  <input type="text" name="recipientAdditionalInfo" placeholder="He loves the Red Ryder and Ovaltine. Dislikes the color pink.">
-</label>
-<button>Submit</button>
-</form>
+<div id="requester-form" class="container">
+  <form action="action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label>WHAT IS YOUR NAME?</label>
+      </div>
+      <div class="col-75">
+      <input type="text" name="requesterName" placeholder="Ralph Parker">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>YOUR E-MAIL?</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="requesterEmail" placeholder="turkeylover47@gmail.com">
+      </div>
+           <div class="row">
+      <div class="col-25">
+        <label>YOUR BUDGET?</label>
+      </div>
+      <div class="col-75">
+          <input type="number" name="recipientAge" placeholder="8">
+      </div>
+    </div>
+    </div>
+     <div class="row">
+      <div class="col-25">
+        <label>HOW DO YOU KNOW YOUR GIFT RECIPIENT?</label>
+      </div>
+      <div class="col-75">
+        <input type="text" name="recipientRelationship" placeholder="He is my son.">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label>RECIPIENT'S GENDER?</label>
+      </div>
+      <div class="col-75">
+        <select name="recipientGender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+    </div>
+         <div class="row">
+      <div class="col-25">
+        <label>RECIPIENT'S AGE?</label>
+      </div>
+      <div class="col-75">
+          <input type="number" name="recipientAge" placeholder="8">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">ANYTHING ELSE YOU'D LIKE US TO KNOW?</label>
+      </div>
+      <div class="col-75">
+        <textarea type="text" name="recipientAdditionalInfo" 
+        placeholder="He loves the Red Ryder and Ovaltine. Dislikes the color pink." 
+        style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
 
 <footer>
   Want to help others find the perfect gifts? 
