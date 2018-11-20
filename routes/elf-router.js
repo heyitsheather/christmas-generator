@@ -10,6 +10,10 @@ router.get("/become-an-elf-signup", (req, res, next)=> {
   res.render("elf-views/elf-signup.hbs");
 });
 
+router.get("/workshop", (req, res, next)=> {
+  res.render("elf-views/elf-workshop.hbs");
+});
+
 router.get("/become-an-elf-login", (req, res, next)=> {
   // send flash messages to the hbs file as "messages"
   res.render("elf-views/elf-login.hbs");
@@ -17,7 +21,12 @@ router.get("/become-an-elf-login", (req, res, next)=> {
 
 router.post("/process-signup", (req, res, next)=> {
 
-  const { name, surname, email, originalPassword } = req.body;
+  const { 
+    name, 
+    surname, 
+    email, 
+    originalPassword 
+  } = req.body;
 
   // THIS IS WHERE WE CHECK THE PASSWORD RULES
   if(!originalPassword || originalPassword.match(/[0-9]/) === null){
@@ -32,12 +41,17 @@ router.post("/process-signup", (req, res, next)=> {
   //encrypt the submitted password before saving
   const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
 
-  Elf.create({ name, surname, email, encryptedPassword })
+  Elf.create({ 
+    name, 
+    surname, 
+    email, 
+    encryptedPassword 
+  })
   .then(userDoc => {
     // "req.flash()" is defined by "connect-flash"
     // (2 arguments: message type and message text)
-    req.flash("success","Signup success! 😁");
-    res.redirect("/");
+    req.flash("success","Awesome! You become an Elf! 😁");
+    res.redirect("/workshop");
   })
   .catch(err => next(err));
 });

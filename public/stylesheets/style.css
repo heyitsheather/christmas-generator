@@ -37,4 +37,8 @@ h2 {
   /* bring your own prefixes */
   transform: translate(-50%, -50%); }
 
+form {
+  display: flex;
+  flex-direction: column; }
+
 /*# sourceMappingURL=style.css.map */
