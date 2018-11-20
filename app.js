@@ -49,6 +49,9 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // default value for title local
 app.locals.title = 'Christmas Gift Ideas Generator';
 
+// default value for secondTitle for Elf page
+app.locals.secondTitle = 'Help people to finds 3 special Gifts 🎁 and gain 50 cent!';
+
 
 
 const index = require('./routes/index');
