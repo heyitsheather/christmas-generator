@@ -48,7 +48,22 @@ router.post("/process-signup", (req, res, next)=> {
 });
 
 router.get("/workshop", (req, res, next)=> {
-  res.render("elf-views/elf-workshop.hbs");
+
+  if(!req.user){
+    // AUTHORIZATION: You have to be logged-in AS AN ADMIN to visit this page
+    req.flash("error","Only Elf can do that. 👊🏾");
+    res.redirect("/become-an-elf-login");
+    return; //use "return" instead of a big else
+  }
+
+  Elf.find()
+  //.sort( { role: 1 , createdAt: 1 } )
+  .then(elfResults => {
+    res.locals.elfArray = elfResults;
+    res.render("elf-views/elf-workshop.hbs");
+  })
+  .catch(err => next(err));
+
 });
 
 router.get("/become-an-elf-login", (req, res, next)=> {

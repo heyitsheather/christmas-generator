@@ -13,6 +13,8 @@ const flash        = require("connect-flash");
 const MongoStore   = require("connect-mongo")(session);
 const passport     = require("passport");
 
+require("./config/passport/passport-setup.js");
+
 
 mongoose
   .connect('mongodb://localhost/christmas-generator', {useNewUrlParser: true})
@@ -75,7 +77,8 @@ app.use((req, res, next) => {
   //send flash message to the hbs files as "message"
   res.locals.messages = req.flash();
   // send logged in user's info to ALL hbs file as "currentUser"
-  res.locals.currentElf = req.elf;
+  res.locals.currentElf = req.user;
+  console.log(req.method, req.path, req.user)
 
   next();
 });
