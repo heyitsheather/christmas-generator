@@ -8,6 +8,10 @@ const hbs          = require('hbs');
 const mongoose     = require('mongoose');
 const logger       = require('morgan');
 const path         = require('path');
+const session      = require("express-session");
+const flash        = require("connect-flash");
+const MongoStore   = require("connect-mongo")(session);
+const passport     = require("passport");
 
 
 mongoose
@@ -44,12 +48,34 @@ app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
+// makes our app create sessions (more on this later)
+app.use(session({
+  resave: true,
+  saveUninitialized: true,
+  // "secret" should be a string that's different for every app
+  secret: process.env.SESSION_SECRET,
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+}));
+
 
 
 // default value for title local
 app.locals.title = 'Christmas Gift Ideas Generator';
 
+// default value for secondTitle for Elf page
+app.locals.secondTitle = 'Help people to finds 3 special Gifts 🎁 and gain 50 cent!';
 
+app.use(flash());
+// this function runs before All ypur routes
+app.use((req, res, next) => {
+  
+  //send flash message to the hbs files as "message"
+  res.locals.messages = req.flash();
+  // send logged in user's info to ALL hbs file as "currentUser"
+  // res.locals.currentUser = req.user;
+
+  next();
+});
 
 const index = require('./routes/index');
 app.use('/', index);
