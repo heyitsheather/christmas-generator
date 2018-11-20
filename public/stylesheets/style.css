@@ -23,6 +23,11 @@ h1 {
 
 .container {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  width: 80%; }
+
+h2 {
+  width: 60%;
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */
