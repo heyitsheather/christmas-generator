@@ -30,4 +30,11 @@ h2 {
   width: 60%;
   display: flex; }
 
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%); }
+
 /*# sourceMappingURL=style.css.map */
