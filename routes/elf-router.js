@@ -51,7 +51,7 @@ router.get("/workshop", (req, res, next)=> {
 
   if(!req.user){
     // AUTHORIZATION: You have to be logged-in AS AN ADMIN to visit this page
-    req.flash("error","Only Elf can do that. 👊🏾");
+    req.flash("error","Only Elves can do that. 👊🏾");
     res.redirect("/become-an-elf-login");
     return; //use "return" instead of a big else
   }
@@ -118,7 +118,7 @@ router.get("/logout", (req, res, next) => {
   req.logOut();
 
   req.flash("success","Logged out successfully! ");
-  res.redirect("/become-an-elf-signup");
+  res.redirect("/become-an-elf-login");
 });
 
 
