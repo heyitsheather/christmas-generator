@@ -1,6 +1,5 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  padding: 50px; }
 
 a {
   color: #00B7FF; }
@@ -19,7 +18,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Helvetica' , sans-serif; }
 
 .container {
   display: flex;
@@ -36,5 +36,9 @@ h2 {
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%); }
+
+.requester-form {
+  display: flex;
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */

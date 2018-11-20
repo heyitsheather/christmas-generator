@@ -1,6 +1,7 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+  // font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+ }
 
 a {
   color: #00B7FF; }
@@ -23,6 +24,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-family: 'Helvetica' , sans-serif;
+
 }
 
 .container {
@@ -45,4 +48,15 @@ h2 {
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
 }
+
+//index(home) page--------------------------------
+.requester-form {
+  display: flex;
+  display: inline-block;
+  
+}
+//--404 page-----------------------------------
+
+
+
 
