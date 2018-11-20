@@ -11,6 +11,10 @@ router.get('/elf-login', (req, res, next) => {
   res.render('elf-login.hbs');
 });
 
+router.get('/thanks-requester', (req, res, next)=>{
+  res.render('thanks-requester.hbs');
+});
+
 router.post("/process-request", (req, res, next) => {
   const { requesterName,
   requesterEmail,
@@ -30,7 +34,7 @@ router.post("/process-request", (req, res, next) => {
     recipientAge,
     recipientAdditionalInfo })
     .then(requestDoc => {
-      res.redirect("/thanks-requester.hbs");
+      res.redirect("/thanks-requester");
     })
     .catch(err => next(err));
 });

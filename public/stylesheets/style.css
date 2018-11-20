@@ -6,3 +6,23 @@ a {
   color: #00B7FF; }
 
 /*# sourceMappingURL=style.css.map */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center; }
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+.container {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=style.css.map */

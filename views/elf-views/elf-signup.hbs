@@ -1,10 +1,19 @@
-<h2>Sign Up</h2>
+<h1>Become an Elf to help people to finds Awesome Gifts 🎁</h1>
+
+<section class="container">
+<h2>Becoming an Elf is an important choise, you need to be very creative to suggest 3 awesome gifts!</h2>
+
 
 <form action="/process-signup" method="POST">
 
   <label for="">
-    Your Full Name: 
-    <input type="text" name="fullName" placeholder="Mister Elf">
+    Name: 
+    <input type="text" name="name" placeholder="">
+  </label>
+
+  <label for="">
+    Surname: 
+    <input type="text" name="name" placeholder="">
   </label>
 
   <label for="">
@@ -17,7 +26,14 @@
     <input type="password" name="originalPassword" placeholder="Your password">
   </label>
 
-  <button>Sign Up</button>
+  <div>
+  <button><a href="/become-an-elf-signup">Sign up</a></button>
+  <p>or</p>
+  <button><a href="/become-an-elf-login">Log In</a></button>
+  </div>
+
 </form>
 
 <a href="/google/login">Sign Up with Google</a>
+
+</section>
