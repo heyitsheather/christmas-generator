@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-router.get('/become-an-elf-login', (req, res, next) => {
+router.get('/elf-login', (req, res, next) => {
   res.render('elf-views/elf-login.hbs');
 });
 
