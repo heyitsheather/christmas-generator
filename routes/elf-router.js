@@ -1,7 +1,8 @@
-const express = require('express');
-const router  = express.Router();
-const bcrypt  = require("bcrypt");
-const Elf     = require("../models/elf-model.js");
+const express     = require('express');
+const router      = express.Router();
+const bcrypt      = require("bcrypt");
+const Elf         = require("../models/elf-model.js");
+const giftRequest = require("../models/gift-request-model.js");
 
 
 router.get("/elf-signup", (req, res, next)=> {
@@ -50,14 +51,14 @@ router.get("/workshop", (req, res, next)=> {
   if(!req.user){
     // AUTHORIZATION: You have to be logged-in AS AN ADMIN to visit this page
     req.flash("error","Only Elves can do that. 👊🏾");
-    res.redirect("/become-an-elf-login");
+    res.redirect("/elf-login");
     return; //use "return" instead of a big else
   }
 
-  Elf.find()
-  //.sort( { role: 1 , createdAt: 1 } )
-  .then(elfResults => {
-    res.locals.elfArray = elfResults;
+  giftRequest.find()
+  .then(giftResults => {
+
+    res.locals.giftArray = giftResults;
     res.render("elf-views/elf-workshop.hbs");
   })
   .catch(err => next(err));

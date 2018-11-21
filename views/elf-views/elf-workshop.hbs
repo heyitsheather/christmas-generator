@@ -19,12 +19,18 @@
 
   <article>
     <section>
-    <ul>
-      <!-- {{#each requestArray}}
+    <ul class="flex center flex-dir-clmn">
+      {{#each giftArray}}
       <li>
-        <h3>{{this.name}}</h3>
+        <p>{{this.requesterBudget}}</p>
+      
+        <p>{{this.recipientGender}}</p>
+      
+        <p>{{this.recipientAge}}</p>
       </li>
-      {{/each}} -->
+
+
+      {{/each}}
     </ul>
     </section>
   </article>
