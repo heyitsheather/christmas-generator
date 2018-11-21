@@ -1,69 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class= "homepage">
+<h1 class="homepage-title">TINSEL IN A TANGLE?</H1>
+<div class="homepage-body">
+<h2 class="homepage-subtitle">LET US HELP YOU FIND THE PERFECT GIFT!</h2>
 
-<h1>IS YOUR TINSEL IN A TANGLE?</H1>
-
-<h2>WE ARE HERE TO HELP! FILL OUT THE FORM TO THE RIGHT, AND WE WILL HELP YOU FIND THE PERFECT GIFT.</h2>
 
 
-<div id="requester-form" class="container">
+<div class="requester-form-container">
   <form action="action_page.php">
     <div class="row">
-      <div class="col-25">
+      {{!-- <div class="col-25">
         <label>WHAT IS YOUR NAME?</label>
-      </div>
+      </div> --}}
       <div class="col-75">
-      <input type="text" name="requesterName" placeholder="Ralph Parker">
+      <input type="text" name="requesterName" placeholder="WHAT IS YOUR NAME?">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      {{!-- <div class="col-25">
         <label>YOUR E-MAIL?</label>
-      </div>
+      </div> --}}
       <div class="col-75">
-        <input type="text" name="requesterEmail" placeholder="turkeylover47@gmail.com">
+        <input type="text" name="requesterEmail" placeholder="YOUR E-MAIL?">
       </div>
-           <div class="row">
-      <div class="col-25">
+      <div class="row">
+     {{!-- <div class="col-25"></div>  --}}
+      <div class="col-75">
+          {{!-- <input type="text" name="recipientAge" placeholder="YOUR BUDGET?">
+      </div> --}} 
+      
+      <div class="slidecontainer"></div>
         <label>YOUR BUDGET?</label>
-      </div>
-      <div class="col-75">
-          <input type="number" name="recipientAge" placeholder="8">
-      </div>
-    </div>
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<datalist id="tickmarks">
+  <option value="0">
+  <option value="5">
+  <option value="10">
+  <option value="20">
+  <option value="30">
+  <option value="40">
+  <option value="50">
+  <option value="60">
+  <option value="70">
+  <option value="80">
+  <option value="100">
+  <option value="150">
+  <option value="200">
+  <option value="250">
+  <option value="300">
+  <option value="500">
+  <option value="1000">
+  <option value="5000">
+  <option value="10000">
+  <option value="20000">
+  <option value="50000">
+</datalist>
+</div>
     </div>
      <div class="row">
-      <div class="col-25">
+      {{!-- <div class="col-25">
         <label>HOW DO YOU KNOW YOUR GIFT RECIPIENT?</label>
-      </div>
+      </div> --}}
       <div class="col-75">
-        <input type="text" name="recipientRelationship" placeholder="He is my son.">
+        <input type="text" name="recipientRelationship" placeholder="HOW DO YOU KNOW YOUR GIFT RECIPIENT?">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      {{!-- <div class="col-25">
         <label>RECIPIENT'S GENDER?</label>
-      </div>
+      </div> --}}
       <div class="col-75">
         <select name="recipientGender">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="male">MY RECIPIENT IS MALE</option>
+          <option value="female">MY RECIPIENT IS FEMALE</option>
         </select>
       </div>
     </div>
          <div class="row">
-      <div class="col-25">
+      {{!-- <div class="col-25">
         <label>RECIPIENT'S AGE?</label>
-      </div>
+      </div> --}}
       <div class="col-75">
-          <input type="number" name="recipientAge" placeholder="8">
+          <input type="text" name="recipientAge" placeholder="RECIPIENT'S AGE?">
       </div>
     </div>
     <div class="row">
-      <div class="col-25">
+      {{!-- <div class="col-25">
         <label for="subject">ANYTHING ELSE YOU'D LIKE US TO KNOW?</label>
-      </div>
+      </div> --}}
       <div class="col-75">
         <textarea type="text" name="recipientAdditionalInfo" 
-        placeholder="He loves the Red Ryder and Ovaltine. Dislikes the color pink." 
+        placeholder="ANYTHING ELSE YOU'D LIKE US TO KNOW?" 
         style="height:200px"></textarea>
       </div>
     </div>
@@ -77,3 +113,8 @@
   Want to help others find the perfect gifts? 
 <a href="/become-an-elf-signup">BECOME AN ELF!</a>
 </footer>
+</div>
+</div>
+
+</body>
+</html>
