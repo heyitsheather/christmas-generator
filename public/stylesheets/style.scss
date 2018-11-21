@@ -54,6 +54,11 @@ ul {
   overflow: hidden;
 }
 
+.margin-l-r-100 {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 nav {
   background-color: #333;
   color: white;
@@ -78,6 +83,10 @@ li {
   flex-direction: column;
 }
 
+.j-space-around {
+  justify-content: space-around;
+}
+
 .j-center {
   justify-content: center;
 }
@@ -94,9 +103,15 @@ nav a {
   text-decoration: none;
 }
 
-.margins {
-  margin-left: 200px;
-  margin-right: 200px;
+.margin-b {
+  margin-bottom: 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .r-card {
@@ -104,6 +119,7 @@ nav a {
   transition: 0.3s;
   padding: 20px;
   margin: 10px;
+  border-radius: 5px;
 }
 
 .l-card {
@@ -111,6 +127,8 @@ nav a {
   transition: 0.3s;
   padding: 20px;
   margin: 10px;
+  background-color: #4caf50;
+  border-radius: 5px;
 }
 
 .l-card:hover {
@@ -119,6 +137,26 @@ nav a {
 
 .pad {
   padding: 2px 16px;
+}
+
+.pad-20 {
+  padding: 20px;
+}
+
+.margin-bttm-20 {
+  margin-bottom: 20px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.width-60 {
+  width: 60%;
+}
+
+.width-20 {
+  width: 20%;
 }
 
 

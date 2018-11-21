@@ -1,40 +1,40 @@
 <nav>
-  <ul>
+  <ul class="margin-l-r-100">
     <li class="float-l"><img class="b-rad-50"src="" alt="profile-picture"></li>
     <li class="float-l"><a href="/workshop">{{currentElf.name}}</a></li>
     <li style="float:right"><a href="/logout">Log out</a></li>
   </ul>
 </nav>
 
-  <h2 class="flex j-center">
+  <h2 class="flex j-space-around">
     Welcome {{currentElf.name}} to your Workshop Space
   </h2>
 
   {{> flash_message}}
 
-<main class="flex container">
+<main class="flex container margin-b">
 
-  <div>
-    <section class="flex j-center">
+  <div class="width-60">
+    <section class="flex j-space-around">
       <p>Pending Request</p>
     </section>
 
-    <section class="flex j-center flex-dir-clmn" >
+    <section class="flex j-space-around flex-dir-clmn" >
       <p>All Requests</p>
 
       {{#each giftArray}}
     <div class="l-card">
       <ul>
         <li>
-          <p>{{this.requesterBudget}}</p>
+          <p>Requester budget: {{this.requesterBudget}}</p>
         
-          <p>{{this.recipientGender}}</p>
+          <p>Gender: {{this.recipientGender}}</p>
         
-          <p>{{this.recipientAge}}</p>
+          <p>Age: {{this.recipientAge}}</p>
 
-          <p>{{this.recipientAdditionalInfo}}</p>
+          <p>Additional Info: {{this.recipientAdditionalInfo}}</p>
 
-          <p>{{this.giftSuggestions}}</p>
+          <p>Suggestions: {{this.giftSuggestions}}</p>
         </li>
       </ul>
       
@@ -49,7 +49,7 @@
     </section>
   </div>
 
-  <aside>
+  <aside class="width-20">
     <button class="">Archive</button>
 
     <div class="r-card">
