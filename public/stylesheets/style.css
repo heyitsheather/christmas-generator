@@ -59,6 +59,12 @@ li {
 .center {
   justify-content: center; }
 
+.b-rad-50 {
+  border-radius: 50%; }
+
+nav a {
+  text-decoration: none; }
+
 .requester-form {
   display: flex;
   display: inline-block; }

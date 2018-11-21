@@ -1,9 +1,7 @@
 const express = require('express');
 const router  = express.Router();
-
-const bcrypt = require("bcrypt");
-
-const Elf = require("../models/elf-model.js");
+const bcrypt  = require("bcrypt");
+const Elf     = require("../models/elf-model.js");
 
 
 router.get("/become-an-elf-signup", (req, res, next)=> {

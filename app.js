@@ -67,7 +67,7 @@ app.use(session({
 app.locals.title = 'Christmas Gift Ideas Generator';
 
 // default value for secondTitle for Elf page
-app.locals.secondTitle = 'Help people to finds 3 special Gifts 🎁 and gain 50 cent!';
+app.locals.secondTitle = 'Gain 50 cent by helping people to finds 3 special Gifts 🎁!';
 
 app.use(passport.initialize());
 app.use(passport.session());

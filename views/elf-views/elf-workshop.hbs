@@ -1,15 +1,17 @@
 <nav>
   <ul>
-    <li><img src="" alt="profile-picture"></li>
-    <li><p>{{currentElf.name}}</p></li>
+    <li><img class="b-rad-50"src="" alt="profile-picture"></li>
+    <li><a href="/workshop">{{currentElf.name}}</a></li>
     <li style="float:right"><a href="/logout">Log out</a></li>
   </ul>
 </nav>
 
 <main>
-<h2 class="flex center">Welcome {{currentElf.name}} to your Workshop Space</h2>
+  <h2 class="flex center">
+    Welcome {{currentElf.name}} to your Workshop Space
+  </h2>
 
-{{> flash_message}}
+  {{> flash_message}}
 
   <aside>
 

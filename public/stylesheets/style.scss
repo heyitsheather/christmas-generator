@@ -5,7 +5,8 @@ body {
  }
 
 a {
-  color: #00B7FF; }
+  color: #00B7FF; 
+}
 
 /*# sourceMappingURL=style.css.map */
 
@@ -74,6 +75,14 @@ li {
 
 .center {
   justify-content: center;
+}
+
+.b-rad-50 {
+  border-radius: 50%;
+}
+
+nav a {
+  text-decoration: none;
 }
 
 //index(home) page--------------------------------
