@@ -1,27 +1,35 @@
 <div class="centered">
   <section class="card">
 
-    <p>Login in to your account</p>
+    <div class="flex j-center pad-top-20">
+    <h3 class="h3-login">Login in to your workshop</h3>
+    </div>
 
-    <form action="/process-login" method="POST" class="flex flex-dir-clmn">
+    <form action="/process-login" method="POST" class="block pad-40">
       
       <label for="">
         Email:
-        <input type="email" name="email" placeholder="elf@santaclous.com"/>
+        <input type="email" name="email" placeholder="elf@santaclous.com" class="width-100"/>
       </label>
 
       <label for="">
         Password:
-        <input type="password" name="originalPassword" placeholder="Your password"/>
+        <input type="password" name="originalPassword" placeholder="Your password" class="width-100"/>
       </label>
 
-      <button class="margin-bttm-20 margin-top-20">Log In</button>
-
-      <a href="/elf-signup">Sign Up</a>
+      <button class="margin-top-20 width-100">Log In</button>
+      
 
     </form>
 
-    <a href="/google/login">Log In with Google</a>
+      <div class="flex j-center pad-bttn-20">
+        <a href="/google/login">Log In with Google</a>
+      </div>
+
+      <div class="flex j-center bg-color-grey">
+        <p>New on the website? <a href="/elf-signup"> Sign Up</a></p>
+      </div>
+      
   </section>
       
   <div class="flex pad-20 j-center">
