@@ -6,36 +6,39 @@
   </ul>
 </nav>
 
-  <h2 class="flex j-space-around">
+<div class="flex container">
+  <h2>
     Welcome {{currentElf.name}} to your Workshop Space
   </h2>
+    {{> flash_message}}
+</div>
 
-  {{> flash_message}}
 
 <main class="flex container margin-b">
 
   <div class="width-60">
-    <section class="flex j-space-around">
-      <p>Pending Request</p>
+    <section class="flex j-space-around border-bottom-blk">
+      <h4>Pending Request</h4>
     </section>
 
+    <div>
     <section class="flex j-space-around flex-dir-clmn" >
-      <p>All Requests</p>
+      <div class="flex j-space-around border-bottom-blk">
+      <h4>All Requests</h4>
+      </div>
 
       {{#each giftArray}}
     <div class="l-card">
       <ul>
-        <li>
-          <p>Requester budget: {{this.requesterBudget}}</p>
+        <li>Requester budget: {{this.requesterBudget}}</li>
         
-          <p>Gender: {{this.recipientGender}}</p>
+        <li>Gender: {{this.recipientGender}}</li>
         
-          <p>Age: {{this.recipientAge}}</p>
+        <li>Age: {{this.recipientAge}}</li>
 
-          <p>Additional Info: {{this.recipientAdditionalInfo}}</p>
+        <li>Additional Info: {{this.recipientAdditionalInfo}}</li>
 
-          <p>Suggestions: {{this.giftSuggestions}}</p>
-        </li>
+        <li>Suggestions: {{this.giftSuggestions}}</li>
       </ul>
       
         <form class="flex flex-dir-clmn" action="" method="POST">
@@ -47,10 +50,13 @@
     </div>
       {{/each}}
     </section>
+        </div>
   </div>
 
   <aside class="width-20">
-    <button class="">Archive</button>
+    <div class="margin-top-80 flex j-space-around">
+      <button class="width-60">Archive</button>
+    </div>
 
     <div class="r-card">
       <div class="pad">
