@@ -1,14 +1,10 @@
-const express = require('express');
-const router  = express.Router();
-const giftRequest = require ("../models/gift-request-model.js")
+const express     = require('express');
+const router      = express.Router();
+const giftRequest = require("../models/gift-request-model.js")
 
 /* GET home page */
 router.get('/', (req, res, next) => {
   res.render('index');
-});
-
-router.get('/become-an-elf-login', (req, res, next) => {
-  res.render('elf-views/elf-login.hbs');
 });
 
 router.get('/thanks-requester', (req, res, next)=>{

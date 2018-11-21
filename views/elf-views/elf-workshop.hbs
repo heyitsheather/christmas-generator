@@ -1,3 +1,63 @@
-<h2>Welcome to your Workshop Space</h2>
+<nav>
+  <ul class="margin-l-r-100">
+    <li class="float-l"><img class="b-rad-50"src="" alt="profile-picture"></li>
+    <li class="float-l"><a href="/workshop">{{currentElf.name}}</a></li>
+    <li style="float:right"><a href="/logout">Log out</a></li>
+  </ul>
+</nav>
 
-<a href="/">Log out</a>
+  <h2 class="flex j-space-around">
+    Welcome {{currentElf.name}} to your Workshop Space
+  </h2>
+
+  {{> flash_message}}
+
+<main class="flex container margin-b">
+
+  <div class="width-60">
+    <section class="flex j-space-around">
+      <p>Pending Request</p>
+    </section>
+
+    <section class="flex j-space-around flex-dir-clmn" >
+      <p>All Requests</p>
+
+      {{#each giftArray}}
+    <div class="l-card">
+      <ul>
+        <li>
+          <p>Requester budget: {{this.requesterBudget}}</p>
+        
+          <p>Gender: {{this.recipientGender}}</p>
+        
+          <p>Age: {{this.recipientAge}}</p>
+
+          <p>Additional Info: {{this.recipientAdditionalInfo}}</p>
+
+          <p>Suggestions: {{this.giftSuggestions}}</p>
+        </li>
+      </ul>
+      
+        <form class="flex flex-dir-clmn" action="" method="POST">
+          First Gift Idea: <input type="text" name="firstGiftIdea" placeholder=""><br>
+          Second Gift Idea: <input type="text" name="secondGiftIdea" placeholder=""><br>
+          Third Gift Idea: <input type="text" name="thirdGiftIdea" placeholder=""><br>
+          <button>Submit</button>
+        </form>
+    </div>
+      {{/each}}
+    </section>
+  </div>
+
+  <aside class="width-20">
+    <button class="">Archive</button>
+
+    <div class="r-card">
+      <div class="pad">
+        <h4><b>Rewards: {{currentElf.rewards}}</b></h4> 
+        <p>Something</p> 
+      </div>
+    </div>
+
+  </aside>
+</main>

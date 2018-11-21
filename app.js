@@ -14,6 +14,8 @@ const MongoStore   = require("connect-mongo")(session);
 const passport     = require("passport");
  
 
+require("./config/passport/passport-setup.js");
+
 
 mongoose
   .connect('mongodb://localhost/christmas-generator', {useNewUrlParser: true})
@@ -44,6 +46,8 @@ app.use(require('node-sass-middleware')({
 }));
       
 
+hbs.registerPartials(path.join(__dirname, "views", "partials"));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -64,7 +68,7 @@ app.use(session({
 app.locals.title = 'Christmas Gift Ideas Generator';
 
 // default value for secondTitle for Elf page
-app.locals.secondTitle = 'Help people to finds 3 special Gifts 🎁 and gain 50 cent!';
+app.locals.secondTitle = 'Gain 50 cent by helping people to finds 3 special Gifts 🎁!';
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -76,7 +80,8 @@ app.use((req, res, next) => {
   //send flash message to the hbs files as "message"
   res.locals.messages = req.flash();
   // send logged in user's info to ALL hbs file as "currentUser"
-  res.locals.currentElf = req.elf;
+  res.locals.currentElf = req.user;
+  console.log(req.method, req.path, req.user)
 
   next();
 });
