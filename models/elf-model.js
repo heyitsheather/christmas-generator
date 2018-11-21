@@ -27,6 +27,9 @@ avatar: {
 encryptedPassword: {
  type: String,
 },
+rewards: [{
+  type: String,
+}],
 }, {
   timestamps: true,
 });

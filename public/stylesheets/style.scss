@@ -31,10 +31,8 @@ h1 {
 }
 
 .container {
-
   display:flex;
   justify-content: center;
-
 }
 
 .p90 {
@@ -61,15 +59,15 @@ nav {
   color: white;
 }
 
-li {
+.float-l {
   float: left;
+}
+
+li {
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-.float-r {
-  float: right;
 }
 
 .flex {
@@ -80,7 +78,7 @@ li {
   flex-direction: column;
 }
 
-.center {
+.j-center {
   justify-content: center;
 }
 
@@ -99,6 +97,28 @@ nav a {
 .margins {
   margin-left: 200px;
   margin-right: 200px;
+}
+
+.r-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 10px;
+}
+
+.l-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 10px;
+}
+
+.l-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.pad {
+  padding: 2px 16px;
 }
 
 

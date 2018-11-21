@@ -46,15 +46,14 @@ nav {
   background-color: #333;
   color: white; }
 
+.float-l {
+  float: left; }
+
 li {
-  float: left;
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none; }
-
-.float-r {
-  float: right; }
 
 .flex {
   display: flex; }
@@ -62,7 +61,7 @@ li {
 .flex-dir-clmn {
   flex-direction: column; }
 
-.center {
+.j-center {
   justify-content: center; }
 
 .b-rad-50 {
@@ -77,6 +76,24 @@ nav a {
 .margins {
   margin-left: 200px;
   margin-right: 200px; }
+
+.r-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 10px; }
+
+.l-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 10px; }
+
+.l-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+
+.pad {
+  padding: 2px 16px; }
 
 .requester-form {
   display: flex;
