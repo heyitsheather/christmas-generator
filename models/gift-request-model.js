@@ -10,8 +10,10 @@ const giftRequestSchema = new Schema({
   recipientGender: { type: String, required: true },
   recipientAge: { type: Number, required: true },
   recipientAdditionalInfo: { type: String},
-  giftSuggestions: { type: String},
-  
+  giftSuggestion1: { type: String},
+  giftSuggestion2: { type: String},
+  giftSuggestion3: { type: String},
+  hasReceivedSuggestion: {type: Boolean, default: false}
   
   // [
     

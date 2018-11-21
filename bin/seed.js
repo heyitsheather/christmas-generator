@@ -20,6 +20,10 @@ const requestData = [
     recipientRelationship: "String",
     recipientAge: 13,
     recipientAdditionalInfo: "Likes video games",
+    giftSuggestion1: '',
+    giftSuggestion2: '',
+    giftSuggestion3: '',
+    hasReceivedSuggestion: false,
   },
   {
     requesterName: "Rudolph Reindeer",
@@ -29,6 +33,10 @@ const requestData = [
     recipientRelationship: "String",
     recipientAge: 55,
     recipientAdditionalInfo: "Likes hunting and cooking",
+    giftSuggestion1: '',
+    giftSuggestion2: '',
+    giftSuggestion3: '',
+    hasReceivedSuggestion: false,
   },
   {
     requesterName: "Raplphie Parker",
@@ -38,6 +46,10 @@ const requestData = [
     recipientRelationship: "String",
     recipientAge: 8,
     recipientAdditionalInfo: "Likes playing outside, but dislikes licking frozen poles",
+    giftSuggestion1: '',
+    giftSuggestion2: '',
+    giftSuggestion3: '',
+    hasReceivedSuggestion: false,
   },
 ];
 

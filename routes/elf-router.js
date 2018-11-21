@@ -55,14 +55,45 @@ router.get("/workshop", (req, res, next)=> {
     return; //use "return" instead of a big else
   }
 
-  giftRequest.find()
+  giftRequest.find({ hasReceivedSuggestion: { $eq: false } })
+  //console.log(giftArray)
   .then(giftResults => {
+   console.log(giftResults)
 
     res.locals.giftArray = giftResults;
     res.render("elf-views/elf-workshop.hbs");
   })
   .catch(err => next(err));
 
+});
+
+router.post( "/process-update/:giftId", (req, res, next) => {
+  // get the ID from the URL (it's inside the "req.params" object)
+  const { giftId } = req.params;
+
+  // get the user inputs from inside "req.body"
+  // (we use "req.body" because it's a POST form)
+ 
+  const { firstGiftIdea,
+  secondGiftIdea,
+  thirdGiftIdea} = req.body;
+
+  // save user inputs in an existing book document
+  giftRequest.findByIdAndUpdate(
+    giftId, // ID of the document to update
+    { $set: { giftSuggestion1: firstGiftIdea,
+    giftSuggestion2: secondGiftIdea,
+    giftSuggestion3: thirdGiftIdea,
+    hasReceivedSuggestion: true}}, // changes to be made to the document
+    { runValidators: true } // additional settings
+  )
+  .then(giftDoc=> {
+    // redirect if it's successful to avoid duplicate data from refreshes
+    // (redirect ONLY to URLs - `/book/${bookId}` instead of "book-details.hbs")
+    res.redirect(`/workshop`);
+  })
+  // "next()" skips to the error handler in "bin/www"
+  .catch(err => next(err));
 });
 
 router.get("/elf-login", (req, res, next)=> {
