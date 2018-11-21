@@ -68,6 +68,9 @@ li {
   padding: 14px 16px;
   text-decoration: none;
 }
+.float-r {
+  float: right;
+}
 
 .flex {
   display: flex;
@@ -85,8 +88,17 @@ li {
   border-radius: 50%;
 }
 
+.width-50 {
+ width: 50%;
+}
+
 nav a {
   text-decoration: none;
+}
+
+.margins {
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 

@@ -6,20 +6,23 @@
   </ul>
 </nav>
 
-<main>
   <h2 class="flex center">
     Welcome {{currentElf.name}} to your Workshop Space
   </h2>
 
+<main class="margins flex">
+
   {{> flash_message}}
 
-  <aside>
+  <div>
+    <section class="flex center">
+      <p>Pending Request</p>
+    </section>
 
-  </aside>
+    <section class="flex center flex-dir-clmn" >
+      <p>All Requests</p>
 
-  <article>
-    <section>
-    <ul class="flex center flex-dir-clmn">
+    <ul >
       {{#each giftArray}}
       <li>
         <p>{{this.requesterBudget}}</p>
@@ -27,11 +30,26 @@
         <p>{{this.recipientGender}}</p>
       
         <p>{{this.recipientAge}}</p>
+
+        <p>{{this.recipientAdditionalInfo}}</p>
+
+        <p>{{this.giftSuggestions}}</p>
       </li>
-
-
+      
+      <div class="flex center">
+        <form class="flex flex-dir-clmn" action="" method="POST">
+          First Gift Idea: <input type="text" name="firstGiftIdea" placeholder=""><br>
+          Second Gift Idea: <input type="text" name="secondGiftIdea" placeholder=""><br>
+          Third Gift Idea: <input type="text" name="thirdGiftIdea" placeholder=""><br>
+          <button>Submit</button>
+        </form>
+      </div>
       {{/each}}
     </ul>
     </section>
-  </article>
+  </div>
+
+  <aside>
+    <button>Archive</button>
+  </aside>
 </main>
