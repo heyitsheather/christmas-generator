@@ -83,7 +83,7 @@ app.use((req, res, next) => {
   res.locals.messages = req.flash();
   // send logged in user's info to ALL hbs file as "currentUser"
   res.locals.currentElf = req.user;
-  console.log(req.method, req.path, req.user)
+  console.log("\n", req.method, req.path, "\n", res.locals.messages, "\n")
 
   next();
 });
