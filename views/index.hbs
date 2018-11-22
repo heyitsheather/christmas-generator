@@ -3,9 +3,9 @@
     <h1 class="homepage-title">TINSEL IN A TANGLE?</H1>
   </div>
 
-  <section class="container flex">
+  <section class="flex p70 margin-auto">
 
-      <div>
+      <div class="p90">
         <h2 class="homepage-subtitle">LET US HELP YOU FIND THE PERFECT GIFT!</h2>
 
         <h3>1. Fill the Form.</h3>
@@ -15,45 +15,48 @@
 
       <div class="card width-100">
 
-        <form action="action_page.php" class="block pad-40">
+        <form action="/process-request" method="POST" class="block pad-40">
 
           <label for="">
-            Name: <input type="text" name="requesterName" placeholder="What is your Name?" class="width-100 input-label"/>
+            <p class="margins-p-name">Name:</p>
+            <input type="text" name="requesterName" placeholder="What is your Name?" class="width-100 input-label"/>
           </label>
           
           <label for="">
-            Email address:<input type="email" name="email" placeholder="Email address" class=" width-100 input-label"/>
+            <p class="margins-p">Email adddress:</p>
+            <input type="email" name="requesterEmail" placeholder="Email address" class=" width-100 input-label"/>
           </label>
 
           <label>
-            Your Budget? <input type="range" min="1" max="100" value="50" class="slider width-100" id="myRange">
+            <p class="margins-p">Your budget:</p> 
+            <input type="range" name="requesterBudget" min="1" max="100" value="50" class="slider width-100" id="myRange">
           </label>
 
   <!--
             <option value="20000"></option>
             <option value="50000"></option>
   -->
-          </datalist>
 
           <label for="">
             <input type="text" name="recipientRelationship" placeholder="How do you know your gift recipient?" class="margin-top-20 width-100 input-label"/>
           </label>
 
-
-            <label>
-              <select name="recipientGender" class="margin-top-20 width-100">
-                <option value="male">My recipient is MALE</option>
-                <option value="female">My recipient is FEMALE</option>
-              </select>
-            </label>
+          <label>
+            <select name="recipientGender" class="margin-top-20 width-100">
+              <option value="male">My recipient is MALE</option>
+              <option value="female">My recipient is FEMALE</option>
+            </select>
+          </label>
 
           <label for="">
-            Recipient's Age:<input type="number" name="recipientAge" placeholder="Recipient's Age?" class="width-100 input-label"/>
+            <p class="margins-p">Recipient Age:</p>
+            <input type="number" name="recipientAge" placeholder="Recipient's Age?" class="width-100 input-label"/>
           </label>
           
 
           <label for="">
-            Additional Info:<input type="text" name="recipientAdditionalInfo" placeholder="Anything else you'd like us to know?" class="width-100 input-label" style="height:100px"/>
+            <p class="margins-p">Additional info:</p>
+            <input type="text" name="recipientAdditionalInfo" placeholder="Anything else you'd like us to know?" class="width-100 input-label" style="height:60px"/>
           </label>
 
           <button class="margin-top-20 width-100 pad-12 border-rad-5">Submit</button>

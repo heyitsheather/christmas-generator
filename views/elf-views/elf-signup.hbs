@@ -2,33 +2,33 @@
 
 {{> flash_message}}
 
-<section class="container flex">
+<section class="flex p70 margin-auto centered">
   <div>
-    <h2 class="flex p90">Becoming an Elf is an important choise, you need to be very creative to suggest 3 awesome gifts!</h2>
+    <h2 class="p90">Becoming an Elf is an important choise, you need to be very creative to suggest 3 awesome gifts!</h2>
   
-    <a href="/">Back</a>
+    <a class="back-btn" href="/">Back</a>
   </div>
 
   <div class="card width-100">
     <form action="/process-signup" method="POST" class="block pad-40">
 
       <label for="">
-        Name:
+        <p class="margins-p-name">Name:</p>
         <input type="text" name="name" placeholder="Name" class="input-label width-100">
       </label>
 
       <label for="">
-        Surname:
+        <p class="margins-p">Surname:</p>
         <input type="text" name="surname" placeholder="Surname" class="input-label width-100">
       </label>
 
       <label for="">
-        Email:
+        <p class="margins-p">Email:</p>
         <input type="email" name="email" placeholder="Email address" class="input-label width-100">
       </label>
 
       <label for="">
-        Password:
+        <p class="margins-p">Password:</p>
         <input type="password" name="originalPassword" placeholder="Password" class="input-label width-100">
       </label>
 
@@ -47,5 +47,5 @@
 </section>
 
 <footer>
-  Proudly made by <a href="">Filippo</a> and <a href="">Heather</a> during IRONHACK Bootcamp.
+  Proudly made by <a target="_blank" href="https://www.linkedin.com/in/filippofresilli/">Filippo</a> and <a href="">Heather</a> during IRONHACK Bootcamp.
 </footer>

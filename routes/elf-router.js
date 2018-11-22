@@ -50,7 +50,10 @@ router.get("/workshop", (req, res, next)=> {
 
   if(!req.user){
     // AUTHORIZATION: You have to be logged-in AS AN ADMIN to visit this page
-    req.flash("error","Only Elves can do that. 👊🏾");
+    req.flash("error","Sorry, only elves can enter in their workshop space.");
+    req.session.save(() => {
+      res.redirect("/elf-login");
+    });
     res.redirect("/elf-login");
     return; //use "return" instead of a big else
   }
@@ -140,7 +143,7 @@ router.post("/process-login", (req, res, next)=> {
 
         // "req.flash()" is defined by "connect-flash"
         // (2 arguments: message type and message text)
-        req.flash("success", "Log In success! 🤓");
+        req.flash("success", "Log In success!");
              // redirect to the home page if the password is CORRECT
         res.redirect("/workshop");
 
@@ -155,6 +158,9 @@ router.get("/logout", (req, res, next) => {
   req.logOut();
 
   req.flash("success","Logged out successfully! ");
+  req.session.save(() => {
+    res.redirect("/elf-login");
+  });
   res.redirect("/elf-login");
 });
 
