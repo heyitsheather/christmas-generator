@@ -3,6 +3,7 @@ const router      = express.Router();
 const bcrypt      = require("bcrypt");
 const Elf         = require("../models/elf-model.js");
 const giftRequest = require("../models/gift-request-model.js");
+const { sendSuggestionResultMail } = require("../config/nodemailer-setup.js");
 
 
 router.get("/elf-signup", (req, res, next)=> {
@@ -91,9 +92,11 @@ router.post( "/process-update/:giftId", (req, res, next) => {
     { runValidators: true } // additional settings
   )
   .then(giftDoc=> {
-    // redirect if it's successful to avoid duplicate data from refreshes
-    // (redirect ONLY to URLs - `/book/${bookId}` instead of "book-details.hbs")
-    res.redirect(`/workshop`);
+    return sendSuggestionResultMail()
+      .then(() => {
+      
+        res.redirect(`/workshop`);
+      });
   })
   // "next()" skips to the error handler in "bin/www"
   .catch(err => next(err));
