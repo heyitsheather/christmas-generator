@@ -7,7 +7,10 @@ body {
   margin: 0px; }
 
 a {
-  color: #00B7FF; }
+  color: white; }
+
+.a-google {
+  color: red; }
 
 /*# sourceMappingURL=style.css.map */
 footer {
@@ -15,7 +18,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: green;
+  background-color: #4caf50;
   color: white;
   text-align: center; }
 
@@ -24,7 +27,8 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-family: 'Helvetica' , sans-serif; }
+  font-family: 'Helvetica' , sans-serif;
+  color: white; }
 
 .h3-login {
   font-size: 24px; }
@@ -137,10 +141,12 @@ nav a {
   max-width: 430px;
   background-color: #ffff; }
 
-.bg-color-grey {
+.bg-color {
   background-color: #4caf50;
   border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px; }
+  border-bottom-left-radius: 5px;
+  padding-left: 40px;
+  padding-right: 40px; }
 
 .r-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -194,7 +200,9 @@ nav a {
   background-image: url(../images/bg-login.jpeg);
   background-repeat: no-repeat;
   /* Do not repeat the image */
-  background-size: cover; }
+  background-size: cover;
+  width: 100%;
+  height: auto; }
 
 .requester-form {
   display: flex;

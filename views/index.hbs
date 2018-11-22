@@ -1,119 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Christmas Gift Ideas Generator</title>
-</head>
-<body>
-  <div class= "homepage">
+<div class="">
+  <div>
     <h1 class="homepage-title">TINSEL IN A TANGLE?</H1>
-    <div class="homepage-body">
-      <h2 class="homepage-subtitle">LET US HELP YOU FIND THE PERFECT GIFT!</h2>
+  </div>
+
+  <section class="container flex">
+
+      <div>
+        <h2 class="homepage-subtitle">LET US HELP YOU FIND THE PERFECT GIFT!</h2>
+
+        <h3>1. Fill the Form.</h3>
+        <h3>2. Pay 1$.</h3>
+        <h3>2. Receve 3 Christmas Gift Ideas.</h3>
+      </div>
+
+      <div class="card width-100">
+
+        <form action="action_page.php" class="block pad-40">
+
+          <label for="">
+            Name: <input type="text" name="requesterName" placeholder="What is your Name?" class="width-100 input-label"/>
+          </label>
+          
+          <label for="">
+            Email address:<input type="email" name="email" placeholder="Email address" class=" width-100 input-label"/>
+          </label>
+
+          <label>
+            Your Budget? <input type="range" min="1" max="100" value="50" class="slider width-100" id="myRange">
+          </label>
+
+  <!--
+            <option value="20000"></option>
+            <option value="50000"></option>
+  -->
+          </datalist>
+
+          <label for="">
+            <input type="text" name="recipientRelationship" placeholder="How do you know your gift recipient?" class="margin-top-20 width-100 input-label"/>
+          </label>
 
 
-      <div class="requester-form-container card">
-  <form action="action_page.php">
-    <div class="row">
-      {{!-- <div class="col-25">
-        <label>WHAT IS YOUR NAME?</label>
-      </div> --}}
-      <div class="col-75">
-      <input type="text" name="requesterName" placeholder="WHAT IS YOUR NAME?">
+            <label>
+              <select name="recipientGender" class="margin-top-20 width-100">
+                <option value="male">My recipient is MALE</option>
+                <option value="female">My recipient is FEMALE</option>
+              </select>
+            </label>
+
+          <label for="">
+            Recipient's Age:<input type="number" name="recipientAge" placeholder="Recipient's Age?" class="width-100 input-label"/>
+          </label>
+          
+
+          <label for="">
+            Additional Info:<input type="text" name="recipientAdditionalInfo" placeholder="Anything else you'd like us to know?" class="width-100 input-label" style="height:100px"/>
+          </label>
+
+          <button class="margin-top-20 width-100 pad-12 border-rad-5">Submit</button>
+
+        </form>
       </div>
-    </div>
-    <div class="row">
-      {{!-- <div class="col-25">
-        <label>YOUR E-MAIL?</label>
-      </div> --}}
-      <div class="col-75">
-        <input type="text" name="requesterEmail" placeholder="YOUR E-MAIL?">
-      </div>
-      <div class="row">
-     {{!-- <div class="col-25"></div>  --}}
-      <div class="col-75">
-          {{!-- <input type="text" name="recipientAge" placeholder="YOUR BUDGET?">
-      </div> --}} 
-      
-      <div class="slidecontainer"></div>
-        <label>YOUR BUDGET?</label>
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  </section>
+
 </div>
-<datalist id="tickmarks">
-  <option value="0">
-  <option value="5">
-  <option value="10">
-  <option value="20">
-  <option value="30">
-  <option value="40">
-  <option value="50">
-  <option value="60">
-  <option value="70">
-  <option value="80">
-  <option value="100">
-  <option value="150">
-  <option value="200">
-  <option value="250">
-  <option value="300">
-  <option value="500">
-  <option value="1000">
-  <option value="5000">
-  <option value="10000">
-  <option value="20000">
-  <option value="50000">
-</datalist>
-</div>
-    </div>
-     <div class="row">
-      {{!-- <div class="col-25">
-        <label>HOW DO YOU KNOW YOUR GIFT RECIPIENT?</label>
-      </div> --}}
-      <div class="col-75">
-        <input type="text" name="recipientRelationship" placeholder="HOW DO YOU KNOW YOUR GIFT RECIPIENT?">
-      </div>
-    </div>
-    <div class="row">
-      {{!-- <div class="col-25">
-        <label>RECIPIENT'S GENDER?</label>
-      </div> --}}
-      <div class="col-75">
-        <select name="recipientGender">
-          <option value="male">MY RECIPIENT IS MALE</option>
-          <option value="female">MY RECIPIENT IS FEMALE</option>
-        </select>
-      </div>
-    </div>
-         <div class="row">
-      {{!-- <div class="col-25">
-        <label>RECIPIENT'S AGE?</label>
-      </div> --}}
-      <div class="col-75">
-          <input type="text" name="recipientAge" placeholder="RECIPIENT'S AGE?">
-      </div>
-    </div>
-    <div class="row">
-      {{!-- <div class="col-25">
-        <label for="subject">ANYTHING ELSE YOU'D LIKE US TO KNOW?</label>
-      </div> --}}
-      <div class="col-75">
-        <textarea type="text" name="recipientAdditionalInfo" 
-        placeholder="ANYTHING ELSE YOU'D LIKE US TO KNOW?" 
-        style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-  </div>
 
-  <footer>
-    Want to help others find the perfect gifts? 
-    <a href="/elf-signup">BECOME AN ELF!</a>
-  </footer>
-  </div>
-  </div>
 
-</body>
-</html>
+<footer>
+  Want to help others find the perfect gifts? 
+  <a href="/elf-signup">BECOME AN ELF!</a>
+</footer>

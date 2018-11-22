@@ -114,7 +114,10 @@ router.post("/process-login", (req, res, next)=> {
     if(!elfDoc){
 
       req.flash("error","Incorrect email.");
-      res.redirect("/elf-login");
+      //next function to show correctly the "incorrect email"
+      req.session.save(() => {
+        res.redirect("/elf-login");
+      });
       return; // use "return" instead of a big else
     }
 
@@ -124,7 +127,11 @@ router.post("/process-login", (req, res, next)=> {
     if (!bcrypt.compareSync(originalPassword, encryptedPassword)){
       // "req.flash()" is defined by "connect-flash"
       // (2 arguments: message type and message text)
-      req.flash("error", "Incorrect password 😩");
+      req.flash("error", "Incorrect password, try regain.");
+      //next function to show correctly the "incorrect password"
+      req.session.save(() => {
+        res.redirect("/elf-login");
+      });
       // redirect to the login page if the password is wrong
       res.redirect("/elf-login");
 
