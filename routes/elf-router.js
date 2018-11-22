@@ -110,7 +110,7 @@ router.post("/process-login", (req, res, next)=> {
     //userDoc will be empty if the email is wrong
     if(!elfDoc){
 
-      req.flash("error","Incorrect email. ☠️");
+      req.flash("error","Incorrect email.");
       res.redirect("/elf-login");
       return; // use "return" instead of a big else
     }

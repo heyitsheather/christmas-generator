@@ -9,38 +9,42 @@
     <a href="/">Back</a>
   </div>
 
-  <form action="/process-signup" method="POST">
+  <div class="card width-100">
+    <form action="/process-signup" method="POST" class="block pad-40">
 
-    <label for="">
-      Name: 
-      <input type="text" name="name" placeholder="">
-    </label>
+      <label for="">
+        Name:
+        <input type="text" name="name" placeholder="Name" class="input-label">
+      </label>
 
-    <label for="">
-      Surname: 
-      <input type="text" name="surname" placeholder="">
-    </label>
+      <label for="">
+        Surname:
+        <input type="text" name="surname" placeholder="Surname" class="input-label">
+      </label>
 
-    <label for="">
-      Email: 
-      <input type="text" name="email" placeholder="elf@santaclous.com">
-    </label>
+      <label for="">
+        Email:
+        <input type="email" name="email" placeholder="Email address" class="input-label">
+      </label>
 
-    <label for="">
-      Password: 
-      <input type="password" name="originalPassword" placeholder="Your password">
-    </label>
+      <label for="">
+        Password:
+        <input type="password" name="originalPassword" placeholder="Password" class="input-label">
+      </label>
 
-    <div>
-    <button>Sign up</button>
-    <p>or</p>
-    <a href="/elf-login">Log In</a>
-    <a href="/google/login">Sign Up with Google</a>
+      <button class="margin-top-20 width-100 pad-12 border-rad-5">Sign up</button>
 
+      <div class="flex pad-20 j-center">
+        <a href="/google/login">Sign Up with Google</a>
+      </div>
+
+    </form>
+
+    <div class="flex j-center bg-color-grey">
+      <p>You are already an elf? <a href="/elf-login"> Log In</a></p>
     </div>
 
-  </form>
-
+  </div>
 </section>
 
 <footer>

@@ -64,6 +64,8 @@ app.use(session({
 
 
 
+app.locals.body_class = "bg-login"
+
 // default value for title local
 app.locals.title = 'Christmas Gift Ideas Generator';
 

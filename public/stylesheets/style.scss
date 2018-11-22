@@ -20,7 +20,7 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: green;
   color: white;
   text-align: center;
 }
@@ -179,10 +179,13 @@ nav a {
   border-radius: 5px;
   // padding: 40px;
   max-width: 430px;
+  background-color: #ffff ;
 }
 
 .bg-color-grey {
-  background-color: #d3d3d3;
+  background-color: #4caf50;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .r-card {
@@ -208,6 +211,10 @@ nav a {
 
 .pad {
   padding: 2px 16px;
+}
+
+.pad-12 {
+  padding: 12px;
 }
 
 .pad-20 {
@@ -238,6 +245,15 @@ nav a {
   border-bottom: 3px solid rgb(0, 0, 0);
 }
 
+.border-rad-5 {
+  border-radius: 5px;
+}
+
+.bg-login {
+  background-image: url(../images/bg-login.jpeg);
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
 
 //index(home) page--------------------------------
 .requester-form {
@@ -247,12 +263,20 @@ nav a {
 }
 
   /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
-  width: 100%;
+// input[type=text], select, textarea{
+//   padding: 12px;
+//   border: 3px solid #39b541;
+//   box-sizing: border-box;
+//   resize: vertical;
+//   border-radius: 5px;
+// }
+
+.input-label {
   padding: 12px;
   border: 3px solid #39b541;
   box-sizing: border-box;
   resize: vertical;
+  border-radius: 5px;
 }
 
 /* Style the label to display next to the inputs */
