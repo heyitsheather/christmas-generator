@@ -3,14 +3,17 @@
 {{> flash_message}}
 
 <section class="flex p70 margin-auto centered">
-  <div>
-    <h2 class="p90">Becoming an Elf is an important choise, you need to be very creative to suggest 3 awesome gifts!</h2>
-  
-    <a class="back-btn" href="/">Back</a>
+  <div class="pad-right-40">
+    <h2 class="">Becoming an Elf is an important choise, you need to be very creative to suggest 3 awesome gifts!</h2>
+
+    <form action="/">
+    <button class="pad-12 border-rad-5 width-100">Back</button>
+    </form>
+
   </div>
 
-  <div class="card width-100">
-    <form action="/process-signup" method="POST" class="block pad-40">
+  <div class="card width-100 border-rad-5">
+    <form action="/process-signup" method="POST" class="pad-40">
 
       <label for="">
         <p class="margins-p-name">Name:</p>
@@ -32,7 +35,7 @@
         <input type="password" name="originalPassword" placeholder="Password" class="input-label width-100">
       </label>
 
-      <button class="margin-top-20 width-100 pad-12 border-rad-5">Sign up</button>
+      <button class="margin-top-20 width-100 pad-12 border-rad-5 bg-btn">Sign up</button>
     </form>
 
       {{!-- <div class="flex j-center pad-bttn-20">
@@ -46,6 +49,6 @@
   </div>
 </section>
 
-<footer>
+<footer class="pos-fixed">
   Proudly made by <a target="_blank" href="https://www.linkedin.com/in/filippofresilli/">Filippo</a> and <a href="">Heather</a> during IRONHACK Bootcamp.
 </footer>
