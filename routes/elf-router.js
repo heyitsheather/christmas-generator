@@ -100,7 +100,6 @@ router.post( "/process-update/:giftId", (req, res, next) => {
     const { requesterName, requesterEmail, giftSuggestion1, giftSuggestion2, giftSuggestion3 } = giftDoc;
     return sendSuggestionResultMail(requesterName, requesterEmail, giftSuggestion1, giftSuggestion2, giftSuggestion3)
       .then(() => {
-        // res.render('message', {requesterName, requesterEmail, giftSuggestion1, giftSuggestion2, giftSuggestion3});
         console.log("email with suggestions sent!🎄🎄🎄🎄🎅")
         res.redirect(`/workshop`);
       });
