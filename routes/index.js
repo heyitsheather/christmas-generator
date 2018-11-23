@@ -4,11 +4,14 @@ const giftRequest = require("../models/gift-request-model.js")
 
 /* GET home page */
 router.get('/', (req, res, next) => {
+  res.locals.body_class = "bg-homepage";
   res.render('index');
+
 });
 
 router.get('/thanks-requester', (req, res, next)=>{
   res.render('thanks-requester.hbs');
+  res.locals.body_class = "bg-homepage";
 });
 
 router.post("/process-request", (req, res, next) => {

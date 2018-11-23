@@ -63,7 +63,7 @@ app.use(session({
 }));
 
 
-
+// default value for background local
 app.locals.body_class = "bg-login"
 
 // default value for title local

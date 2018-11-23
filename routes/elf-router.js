@@ -65,6 +65,9 @@ router.get("/workshop", (req, res, next)=> {
    console.log(giftResults)
 
     res.locals.giftArray = giftResults;
+
+    // default value for background local
+    res.locals.body_class = "bg-workshop";
     res.render("elf-views/elf-workshop.hbs");
 
     return sendSuggestionResultMail;
