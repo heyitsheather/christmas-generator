@@ -27,9 +27,9 @@
             <input type="email" name="requesterEmail" placeholder="Email address" class=" width-100 input-label"/>
           </label>
 
-          <label>
-            <p class="margins-p">Your budget:</p> 
-            <input type="range" name="requesterBudget" min="1" max="100" value="50" class="slider width-100" id="myRange">
+          <label for="">
+            <p class="margins-p">Your budget:</p>
+            <input type="number" name="requesterBudget" placeholder="Insert your budget" class="width-100 input-label"/>
           </label>
 
   <!--
@@ -38,7 +38,8 @@
   -->
 
           <label for="">
-            <input type="text" name="recipientRelationship" placeholder="How do you know your gift recipient?" class="margin-top-20 width-100 input-label"/>
+            <p class="margins-p">Recipient's Relationship:</p>
+            <input type="text" name="recepientRelationship" placeholder="How do you know your gift recipient?" class="width-100 input-label"/>
           </label>
 
           <label>
@@ -56,7 +57,7 @@
 
           <label for="">
             <p class="margins-p">Additional info:</p>
-            <input type="text" name="recipientAdditionalInfo" placeholder="Anything else you'd like us to know?" class="width-100 input-label" style="height:60px"/>
+            <input type="text" name="recipientAdditionalInfo" placeholder="Anything else you'd like us to know?" class="width-100 input-label"/>
           </label>
 
           <button class="margin-top-20 width-100 pad-12 border-rad-5">Submit</button>
