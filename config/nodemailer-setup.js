@@ -10,13 +10,13 @@ const transport = nodemailer.createTransport({
   },
 });
 // setup for confirmation email:
-function sendSignupMail(){
+function sendSignupMail(requesterName, requesterEmail){
   return transport.sendMail({
-  from:"Your Secret Helper Elf <santas.workshop@gmail.com>",
-  to:"Mr. Blah <blah@example.com>",
-  subject:"",
-  text:"",
-  html:"",
+  from:"Christmas Generator <northpoleworkshopelves@gmail.com>",
+  to:`${requesterName} <${requesterEmail}>`,
+  subject:`${requesterName}, your request arrived to the North Pole`,
+  text:"Our elves have their pointy thinking caps on, and will send you another email when they've thought of the perfect gift!",
+  html:"Our elves have their pointy thinking caps on, and will send you another email when they've thought of the perfect gift!",
 });
 }
 
@@ -25,7 +25,7 @@ function sendSuggestionResultMail(requesterName, requesterEmail, giftSuggestion1
   giftSuggestion2,
   giftSuggestion3){
   return transport.sendMail({
-  from:"Christmas Generator <northpoleworkshopelves@gmail.com",
+  from:"Christmas Generator <northpoleworkshopelves@gmail.com>",
   to: `${requesterName} <${requesterEmail}>`,
   subject:"Here are your Christmas gift ideas!",
   text: `We think your gift recipient would love: ${giftSuggestion1}, ${giftSuggestion2}, ${giftSuggestion3}`,
