@@ -6,6 +6,3 @@ User enters their contact info along with a bit about their gift recipient, and 
 
 User gets a response email with the elf's gift ideas.
 
-<iframe src="https://giphy.com/embed/3ofT5SAruPuAqHEQNy" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/filmeditor-will-ferrell-elf-3ofT5SAruPuAqHEQNy">via GIPHY</a></p>
-
-
