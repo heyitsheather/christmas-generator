@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-// const giftRequest = require("../models/gift-request-model")
+
 
 
 const transport = nodemailer.createTransport({

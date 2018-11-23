@@ -17,25 +17,23 @@ router.post("/process-request", (req, res, next) => {
   const { requesterName,
   requesterEmail,
   requesterBudget,
-  recepientRelationship,
   recipientGender,
   recipientRelationship,
   recipientAge,
   recipientAdditionalInfo } = req.body;
-
+    console.log(req.body, 'hhhhhhhhhhhhhhhhhhhhhhhhhhhh')
   giftRequest.create({ requesterName,
     requesterEmail,
     requesterBudget,
-    recepientRelationship,
     recipientGender,
     recipientRelationship,
     recipientAge,
     recipientAdditionalInfo })
     .then(requestDoc => {
-    const { requesterName, requesterEmail } = giftDoc;
+    const { requesterName, requesterEmail } = requestDoc;
     return sendSignupMail(requesterName, requesterEmail)
-    .then(() => {
-      console.log("confirmation email sent to requester! ⛄️⛄️⛄️⛄️⛄️⛄️⛄️")
+    .then((requestDoc) => { 
+      console.log("confirmation email sent to requester! ⛄️⛄️⛄️⛄️⛄️⛄️⛄️", requestDoc)
       res.redirect("/thanks-requester");
     });
   })
