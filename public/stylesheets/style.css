@@ -9,17 +9,16 @@ a {
   color: red; }
 
 /*# sourceMappingURL=style.css.map */
-.margin-auto {
-  margin: auto; }
-
 footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #4caf50;
   color: white;
   text-align: center; }
+
+.pos-fixed {
+  position: fixed; }
 
 h1 {
   display: flex;
@@ -30,18 +29,20 @@ h1 {
   color: white; }
 
 .h3-login {
-  font-size: 24px; }
+  font-size: 24px;
+  font-family: 'Helvetica' , sans-serif; }
+
+.h3-index {
+  font-size: 24px;
+  font-family: 'Helvetica' , sans-serif;
+  color: white; }
 
 .container {
   display: flex;
   justify-content: center; }
 
-.p90 {
-  width: 90%;
+.font-ar-helv-sans {
   font-family: Arial, 'Helvetica', sans-serif; }
-
-.p70 {
-  width: 70%; }
 
 .centered {
   position: fixed;
@@ -53,10 +54,6 @@ h1 {
 .homepage {
   background-image: url("/images/treebackground.jpg");
   color: white; }
-
-.homepage-body {
-  display: flex;
-  justify-content: space-around; }
 
 .homepage-title {
   font-size: 80px;
@@ -111,45 +108,8 @@ li {
 .j-center {
   justify-content: center; }
 
-.b-rad-50 {
-  border-radius: 50%; }
-
-.width-100 {
-  width: 100%; }
-
-.width-50 {
-  width: 50%; }
-
-.width-60 {
-  width: 60%; }
-
-.width-20 {
-  width: 20%; }
-
 nav a {
   text-decoration: none; }
-
-.margin-b {
-  margin-bottom: 50px; }
-
-.margin-top-80 {
-  margin-top: 80px; }
-
-.margins-p {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  margin-top: 20px; }
-
-.margins-p-name {
-  margin-top: 0px;
-  margin-bottom: 10px; }
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 5px;
-  max-width: 430px;
-  background-color: #ffff; }
 
 .bg-color {
   background-color: #4caf50;
@@ -158,20 +118,39 @@ nav a {
   padding-left: 40px;
   padding-right: 40px; }
 
+.width-100 {
+  width: 100%; }
+
+.p70 {
+  width: 70%; }
+
+.width-60 {
+  width: 60%; }
+
+.width-50 {
+  width: 50%; }
+
+.width-20 {
+  width: 20%; }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-width: 430px;
+  background-color: #ffff; }
+
 .r-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 20px;
-  margin: 10px;
-  border-radius: 5px; }
+  margin: 10px; }
 
 .l-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   padding: 20px;
   margin: 10px;
-  background-color: #4caf50;
-  border-radius: 5px; }
+  background-color: #4caf50; }
 
 .l-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
@@ -185,26 +164,56 @@ nav a {
 .pad-20 {
   padding: 20px; }
 
+.pad-40 {
+  padding: 40px; }
+
 .pad-bttm-20 {
   padding-bottom: 20px; }
 
 .pad-top-20 {
   padding-top: 20px; }
 
-.pad-40 {
-  padding: 40px; }
+.pad-right-40 {
+  padding-right: 40px; }
+
+.margin-auto {
+  margin: auto; }
+
+.margin-top-80 {
+  margin-top: 80px; }
+
+.margin-top-20 {
+  margin-top: 20px; }
+
+.margins-p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-top: 20px; }
+
+.margins-p-name {
+  margin-top: 0px;
+  margin-bottom: 10px; }
+
+.margin-b {
+  margin-bottom: 50px; }
 
 .margin-bttm-20 {
   margin-bottom: 20px; }
 
-.margin-top-20 {
-  margin-top: 20px; }
+.margin-bttm-40 {
+  margin-bottom: 40px; }
 
 .border-bottom-blk {
   border-bottom: 3px solid black; }
 
 .border-rad-5 {
   border-radius: 5px; }
+
+.bg-btn {
+  background-color: #4caf50; }
+
+.bg-btn:hover {
+  background-color: #f2aa3f; }
 
 .back-btn {
   display: block;
@@ -215,6 +224,9 @@ nav a {
   background-color: #4caf50;
   text-align: center; }
 
+.back-btn:hover {
+  background-color: #f2aa3f; }
+
 .bg-login {
   background-image: url(../images/bg-login.jpeg);
   background-repeat: no-repeat;
@@ -222,6 +234,9 @@ nav a {
   background-size: cover;
   width: 100%;
   height: auto; }
+
+.error-message {
+  text-align: center; }
 
 .requester-form {
   display: flex;

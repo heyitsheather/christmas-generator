@@ -51,7 +51,7 @@ router.get("/workshop", (req, res, next)=> {
 
   if(!req.user){
     // AUTHORIZATION: You have to be logged-in AS AN ADMIN to visit this page
-    req.flash("error","Sorry, only elves can enter in their workshop space.");
+    req.flash("error","Sorry, only elves can enter in the workshop space.");
     req.session.save(() => {
       res.redirect("/elf-login");
     });
