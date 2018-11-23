@@ -29,7 +29,7 @@ footer {
 }
 
 .back-btn-left-bttm {
-  position: absolute;
+  // position: absolute;
   left: 0;
   bottom: 0;
 }
@@ -41,13 +41,14 @@ h1 {
 
 .h3-login {
   font-size: 24px;
-  font-family: 'Helvetica' , sans-serif;
+  // font-family: 'Helvetica' , sans-serif;
+  font-weight: bold;
 }
 
 .h3-index {
   font-size: 24px;
-  font-family: 'Helvetica' , sans-serif;
-  color: white;
+  // font-family: 'Helvetica' , sans-serif;
+  font-weight: bold;
 }
 
 .container {
@@ -60,7 +61,7 @@ h1 {
 }
 
 .centered {
-  position: fixed;
+  // position: fixed;
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
@@ -76,9 +77,8 @@ h1 {
 }
 
 .homepage-subtitle{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: 100;
+  // font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
 }
 
 ul {
@@ -220,6 +220,10 @@ nav a {
   padding-right: 40px;
 }
 
+.pad-right-10 {
+  padding-right: 10px;
+}
+
 // all margins used ----------------------------------------
 
 .margin-auto {
@@ -295,16 +299,22 @@ nav a {
 }
 
 .back-btn {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  border: 1px solid white;
-  background-color: #b51b1b;
-  text-align: center;
+  // border: 1px solid white;
+  // background-color: #b51b1b;
+  // text-align: center;
 }
 
+.img-check {
+  height: 30px;
+  width: 30px;
+}
+
+
 .back-btn:hover {
-  background-color: #981818;
+  // background-color: #981818;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
