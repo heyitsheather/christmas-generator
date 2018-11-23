@@ -66,6 +66,8 @@ router.get("/workshop", (req, res, next)=> {
 
     res.locals.giftArray = giftResults;
     res.render("elf-views/elf-workshop.hbs");
+
+    return sendSuggestionResultMail;
   })
   .catch(err => next(err));
 
@@ -89,12 +91,14 @@ router.post( "/process-update/:giftId", (req, res, next) => {
     giftSuggestion2: secondGiftIdea,
     giftSuggestion3: thirdGiftIdea,
     hasReceivedSuggestion: true}}, // changes to be made to the document
-    { runValidators: true } // additional settings
+    { runValidators: true, new: true } // additional settings
   )
   .then(giftDoc=> {
-    return sendSuggestionResultMail()
+    const { requesterName, requesterEmail, giftSuggestion1, giftSuggestion2, giftSuggestion3 } = giftDoc;
+    return sendSuggestionResultMail(requesterName, requesterEmail, giftSuggestion1, giftSuggestion2, giftSuggestion3)
       .then(() => {
-      
+        // res.render('message', {requesterName, requesterEmail, giftSuggestion1, giftSuggestion2, giftSuggestion3});
+        console.log("email with suggestions sent!🎄🎄🎄🎄🎅")
         res.redirect(`/workshop`);
       });
   })
