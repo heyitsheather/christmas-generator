@@ -6,3 +6,6 @@ User enters their contact info along with a bit about their gift recipient, and 
 
 User gets a response email with the elf's gift ideas.
 
+Try it out here: https://christmas-generator.herokuapp.com/
+
+
